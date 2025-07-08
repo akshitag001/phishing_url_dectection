@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e3f2fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .result {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .back {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>🔍 Scan Result</h2>
+        <p class="result"><strong>URL:</strong> {{ result.url }}</p>
+        <p class="result"><strong>Status:</strong> {{ result.prediction }}</p>
+        <p class="result"><strong>Confidence:</strong> {{ result.probability }}%</p>
+        <a href="/" class="back">🔙 Test another URL</a>
+    </div>
+</body>
+</html>
